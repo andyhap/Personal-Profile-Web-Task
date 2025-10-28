@@ -1,9 +1,9 @@
 import userIcon from "../assets/images/logo/person.svg";
 import textboxIcon from "../assets/images/logo/text-box.svg";
 
-const AboutSection = () => {
+export default function AboutSection() {
     return (
-        <section className="w-full flex justify-center items-center py-8 px-4">
+        <section className="w-full flex justify-center items-center py-8 px-4 mt-20">
             <div
                 className="w-full max-w-[1024px] min-h-[384px] bg-white rounded-[24px] border border-gray-200 shadow-lg flex flex-col md:flex-row items-center p-6 md:p-8"
             >
@@ -49,23 +49,27 @@ const AboutSection = () => {
                     </div>
 
                     {/* Button */}
-                <button
-                className="flex items-center justify-center gap-2 w-full md:w-[760px] h-[40px] rounded-[8px] mt-6 text-white font-semibold shadow-lg mx-auto"
-                style={{
-                    background: "linear-gradient(90deg, #3B82F6 0%, #9333EA 100%)",
-                }}
-                >
-                    <img
-                        src={textboxIcon}
-                        alt="email icon"
-                        className="w-5 h-5"
-                    />
-                    <span>Konsultasi Gratis</span>
-                </button>
+                    <button
+                    className="flex items-center justify-center md:justify-start gap-2 w-full md:w-[760px] h-[40px] rounded-[8px] mt-6 text-white font-semibold shadow-lg mx-auto md:mx-0 md:pl-4 transform transition-all duration-300 hover:scale-[1.03]"
+                    style={{
+                        background: "linear-gradient(90deg, #3B82F6 0%, #9333EA 100%)",
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "linear-gradient(90deg, #2563EB 0%, #7E22CE 100%)";
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "linear-gradient(90deg, #3B82F6 0%, #9333EA 100%)";
+                    }}
+                    >
+                        <img
+                            src={textboxIcon}
+                            alt="email icon"
+                            className="w-5 h-5"
+                        />
+                        <span>Konsultasi Gratis</span>
+                    </button>
                 </div>
             </div>
         </section>
     );
-};
-
-export default AboutSection;
+}

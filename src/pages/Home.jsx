@@ -10,7 +10,8 @@ export default function Home() {
         <div className="w-full min-h-screen bg-white">
             <Navbar />
             <ProfileCard />
-            <AboutSection />
+            <AboutSection />|
+            <SkillsSection />
             <Footer />
         </div>
     );

@@ -31,10 +31,10 @@ export default function ProfileCard() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center lg:justify-start">
-                        <button className="bg-blue-600 text-white font-semibold text-[16px] px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition">
+                        <button className="bg-blue-600 text-white font-semibold text-[16px] px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transform transition-all duration-300 hover:scale-[1.03] ">
                         Lihat Karya
                         </button>
-                        <button className="border border-blue-400 text-blue-600 font-semibold text-[16px] px-6 py-3 rounded-xl hover:bg-blue-50 transition">
+                        <button className="border border-blue-400 text-blue-600 font-semibold text-[16px] px-6 py-3 rounded-xl hover:bg-blue-50 transform transition-all duration-300 hover:scale-[1.03]">
                         Hubungi Saya
                         </button>
                     </div>
