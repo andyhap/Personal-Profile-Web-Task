@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import ProfileCard from "../components/ProfileCard";
 import AboutSection from "../components/AboutSection";
 import SkillsSection from "../components/SkillsSection";
+import ProjectSection from "../components/ProjectSection";
+import TestimoniSection from "../components/TestimoniSection";
+import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -12,6 +15,9 @@ export default function Home() {
             <ProfileCard />
             <AboutSection />|
             <SkillsSection />
+            <ProjectSection />
+            <TestimoniSection />
+            <ContactSection />
             <Footer />
         </div>
     );
