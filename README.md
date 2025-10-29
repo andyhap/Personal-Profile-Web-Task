@@ -26,6 +26,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 
+## portofolio in dekstop view
+<img width="315" height="949" alt="image" src="https://github.com/user-attachments/assets/25f7ab50-c1c8-4bdb-9c77-3ac89da62606" />
+
+
 ## Portofolio in mobile view
 
 ### Profile section
