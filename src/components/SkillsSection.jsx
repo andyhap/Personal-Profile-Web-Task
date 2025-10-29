@@ -42,7 +42,7 @@ export default function SkillSection() {
                 {skills.map((skill, index) => (
                     <div
                         key={index}
-                        className="w-[252px] h-[194px] bg-white rounded-[16px] shadow-[0_4px_6px_#0000001A,0_2px_4px_#0000001A] flex flex-col items-center justify-center transition-transform hover:-translate-y-1 hover:shadow-lg"
+                        className="w-full max-w-[252px] h-[194px] bg-white rounded-[16px] shadow-[0_4px_6px_#0000001A,0_2px_4px_#0000001A] flex flex-col items-center justify-center transition-transform hover:-translate-y-1 hover:shadow-lg"
                     >
                         <div
                             className={`w-[58px] h-[62px] ${skill.color} rounded-full flex items-center justify-center mb-4`}

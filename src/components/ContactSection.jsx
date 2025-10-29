@@ -5,14 +5,14 @@ import sendIcon from "../assets/images/logo/msg.svg";
 
 export default function ContactSection() {
     return (
-        <section className="w-full flex justify-center py-20 px-4 md:-ml-[70px]">
+        <section className="w-full flex justify-center py-20 px-4 ">
             <div
                 className="relative w-full max-w-[920px] rounded-[24px] shadow-[0_25px_50px_#00000040]
                 bg-gradient-to-r from-[#DBEAFE] via-white to-[#F3E8FF]
                 p-8 md:p-12 flex flex-col md:flex-row items-start gap-10 overflow-visible"
             >
                 {/* card contact */}
-                <div className="flex flex-col justify-between md:max-w-[896px] md:min-h-[564px] text-left z-10">
+                <div className="flex flex-col justify-between w-full md:max-w-[896px] md:min-h-[564px] text-left z-10">
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-20 leading-[24px]">
                             Tertarik<br />Kolaborasi?
@@ -41,9 +41,9 @@ export default function ContactSection() {
 
                 {/* card form */}
                 <div
-                    className="md:absolute md:top-1/2 right-[-150px] md:-translate-y-1/2 
+                    className="md:absolute md:top-1/2 md:right-[-150px] md:-translate-y-1/2 
                     bg-white rounded-[16px] shadow-[0_10px_15px_#0000001A,0_4px_6px_#0000001A]
-                    p-8 w-full md:w-[800px] z-20 transition-all duration-300"
+                    p-8 w-full md:w-[800px] lg:w-[800px] z-20 transition-all duration-300"
                 >
                     <form className="flex flex-col gap-6">
                         <div className="flex flex-col md:flex-row gap-4">

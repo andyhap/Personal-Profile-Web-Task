@@ -55,7 +55,7 @@ export default function PortfolioSection() {
                 {portfolios.map((item, index) => (
                     <div
                         key={index}
-                        className="w-[346px] h-[420px] bg-white rounded-[16px] shadow-[0_4px_6px_#0000001A,0_2px_4px_#0000001A] overflow-hidden transform transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_20px_#00000026]"
+                        className="w-full max-w-[346px] h-[420px] bg-white rounded-[16px] shadow-[0_4px_6px_#0000001A,0_2px_4px_#0000001A] overflow-hidden transform transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_20px_#00000026]"
                     >
                         {/* Gambar */}
                         <div className="relative w-full h-[224px]">

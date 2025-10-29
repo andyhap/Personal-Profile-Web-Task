@@ -8,10 +8,8 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-white shadow-sm relative">
-            <div
-                className="max-w-[1152px] h-[80px] mx-auto flex items-center justify-between px-4 sm:px-6"
-            >
+        <nav className="w-full bg-white shadow-sm relative z-50">
+            <div className="max-w-[1152px] h-[80px] mx-auto flex items-center justify-between px-4 sm:px-6">
                 {/* Logo dan nama */}
                 <div className="flex items-center gap-3">
                     <img
@@ -25,40 +23,45 @@ export default function Navbar() {
                 </div>
 
                 {/* Navigasi */}
-                <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-                    <li className="hover:text-blue-600 cursor-pointer">About</li>
-                    <li className="hover:text-blue-600 cursor-pointer">Skills</li>
-                    <li className="hover:text-blue-600 cursor-pointer">Portfolio</li>
-                    <li className="hover:text-blue-600 cursor-pointer">Contact</li>
+                <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium relative">
+                    {["About", "Skills", "Portfolio", "Contact"].map((item) => (
+                        <li
+                            key={item}
+                            className="relative cursor-pointer group transition"
+                        >
+                            <span className="hover:text-blue-600 transition">{item}</span>
+                            <span className="hidden md:block absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                        </li>
+                    ))}
                 </ul>
 
                 {/* Icon sosmed */}
                 <div className="flex items-center gap-4">
                     <a href="#" aria-label="Instagram">
                         <img
-                        src={instagram}
-                        alt="Instagram"
-                        className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-70 transition"
+                            src={instagram}
+                            alt="Instagram"
+                            className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-70 transition"
                         />
                     </a>
                     <a href="#" aria-label="LinkedIn">
                         <img
-                        src={linkedin}
-                        alt="LinkedIn"
-                        className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-70 transition"
+                            src={linkedin}
+                            alt="LinkedIn"
+                            className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-70 transition"
                         />
                     </a>
                     <a href="#" aria-label="Email">
                         <img
-                        src={email}
-                        alt="Email"
-                        className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-70 transition"
+                            src={email}
+                            alt="Email"
+                            className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-70 transition"
                         />
                     </a>
                 </div>
 
-                {/* Hamburger Button */}
-                <button 
+                {/* Hamburger Button untuk mobile */}
+                <button
                     className="md:hidden flex flex-col gap-1 w-6 h-6"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
@@ -70,16 +73,20 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md py-4 px-6 z-50">
+                <div className="md:hidden absolute bottom-full left-0 w-full bg-white shadow-md py-4 px-6 z-40">
                     <ul className="flex flex-col gap-4 text-gray-700 font-medium">
-                        <li className="hover:text-blue-600 cursor-pointer">About</li>
-                        <li className="hover:text-blue-600 cursor-pointer">Skills</li>
-                        <li className="hover:text-blue-600 cursor-pointer">Portfolio</li>
-                        <li className="hover:text-blue-600 cursor-pointer">Contact</li>
+                        {["About", "Skills", "Portfolio", "Contact"].map((item) => (
+                            <li
+                                key={item}
+                                className="hover:text-blue-600 cursor-pointer relative"
+                            >
+                                {item}
+                            </li>
+                        ))}
                     </ul>
                 </div>
             )}
-            {/* Copyrigth */}
+            {/* Copyright */}
             <div>
                 <p className="text-center text-gray-500 text-sm py-4 px-4">
                     &copy; 2024 Arie Pratama. All rights reserved.

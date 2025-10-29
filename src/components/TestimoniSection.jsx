@@ -1,7 +1,7 @@
 import citraProfile from "../assets/images/profile/citra-nadya.png";
 import ramaProfile from "../assets/images/profile/rama-putra.png";
 
-const TestimoniSection = () => {
+export default function TestimoniSection() {
     const testimonials = [
         {
             id: 1,
@@ -37,7 +37,7 @@ const TestimoniSection = () => {
                     {testimonials.map((testimonial) => (
                         <div 
                             key={testimonial.id}
-                            className="w-full max-w-[472px] h-auto min-h-[244px] bg-white rounded-[16px] border border-gray-100 shadow-[0_10px_15px_#0000001A,0_4px_6px_#0000001A] p-8 flex flex-col transition-transform hover:-translate-y-1 hover:shadow-lg"
+                            className="w-full max-w-full lg:max-w-[472px] h-auto min-h-[244px] bg-white rounded-[16px] border border-gray-100 shadow-[0_10px_15px_#0000001A,0_4px_6px_#0000001A] p-8 flex flex-col transition-transform hover:-translate-y-1 hover:shadow-lg"
                         >
                             {/* Profile Section */}
                             <div className="flex items-center gap-4 mb-6">
@@ -67,7 +67,5 @@ const TestimoniSection = () => {
                 </div>
             </div>
         </section>
-    );
-};
-
-export default TestimoniSection;
+    )
+}
